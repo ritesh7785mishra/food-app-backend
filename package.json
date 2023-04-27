@@ -2,9 +2,9 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "pp.js",
   "scripts": {
-    "start": "app.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
