@@ -6,7 +6,7 @@ const options = {
   dbName: "food-delivery-app",
 };
 mongoose
-  .connect(db_link, options)
+  .connect(db_link, options, { useNewUrlParser: true })
   .then(() => {
     console.log("user data base connected");
   })
