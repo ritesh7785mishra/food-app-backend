@@ -3,16 +3,20 @@ const foodItemsRouter = require("./routers/foodItemsRouter");
 const userRouter = require("./routers/userRouter");
 const cors = require("cors");
 const orderRouter = require("./routers/orderRouters");
+require("dotenv").config();
+const { frontend_port, backend_port } = process.env;
+const port = backend_port || 3000;
+console.log(backend_port);
 
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: frontend_port,
   })
 );
 
 app.use(express.json());
-app.listen(3000);
+app.listen(port);
 
 app.use("/food", foodItemsRouter);
 app.use("/user", userRouter);
